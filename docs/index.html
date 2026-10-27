@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action 'none'">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Evidence-led LinkedIn competitor campaign research. Compare dated ad snapshots, review changes and record useful findings.">
+    <title>Campaign Radar — LinkedIn competitor campaign intelligence</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./public-api.js" defer></script>
+  <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">
+      Skip to intelligence</a>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Project navigation">
+        <a class="brand" href="./" aria-label="Campaign Radar home">
+          <span class="brand-mark" aria-hidden="true">
+            ◉</span>
+          <span>
+            campaign
+            <span class="brand-second">
+              radar</span></span></a>
+        <span class="sidebar-label">
+          RESEARCH WORKSPACE</span>
+        <nav class="view-nav" aria-label="Views">
+          <button type="button" class="nav-item active" data-view="changes" aria-current="page">
+            <span aria-hidden="true">
+              ↗</span>
+            Change feed
+            <span id="nav-change-count" class="nav-count">
+              0</span></button>
+          <button type="button" class="nav-item" data-view="ads">
+            <span aria-hidden="true">
+              ▤</span>
+            Ad library
+            <span id="nav-ad-count" class="nav-count">
+              0</span></button>
+          <button type="button" class="nav-item" data-view="method">
+            <span aria-hidden="true">
+              ◎</span>
+            How it works</button></nav>
+        <div class="sidebar-divider">
+        </div>
+        <div class="sidebar-heading">
+          <span class="sidebar-label">
+            LIVE WATCHLIST</span>
+          <span class="tiny-pill">
+            5</span></div>
+        <p class="watchlist-description">
+          B2B SaaS · CRM & customer platforms</p>
+        <ul id="watchlist" class="watchlist">
+          <li>
+            Loading watchlist…</li></ul>
+        <div class="sidebar-note">
+          <span class="small-dot" aria-hidden="true">
+          </span>
+          <span>
+            Public evidence.
+            <br>
+            Human judgment.</span></div>
+        <div class="sidebar-footer">
+          <span class="local-dot" aria-hidden="true">
+          </span>
+          Local workspace
+          <span class="version">
+            v0.1</span></div></aside>
+      <div class="workspace">
+        <header class="topbar">
+          <div class="breadcrumb">
+            Workspace
+            <span aria-hidden="true">
+              /</span>
+            <strong>
+              Competitor intelligence</strong></div>
+          <div class="platform-tag">
+            <span class="linkedin-mark" aria-hidden="true">
+              in</span>
+            LinkedIn Ad Library</div></header>
+        <main id="main">
+          <div id="global-error" class="alert alert-error" role="alert" hidden>
+          </div>
+          <section class="page-heading" aria-labelledby="page-title">
+            <div>
+              <div class="eyebrow">
+                COMPETITOR CAMPAIGN INTELLIGENCE</div>
+              <h1 id="page-title">
+                Catch the message shift.</h1>
+              <p class="subtitle">
+                Dated ads. Meaningful changes. Evidence you can inspect.</p></div>
+            <button id="open-collection" type="button" class="button button-primary" aria-expanded="false" aria-controls="collection-panel">
+              <span aria-hidden="true">
+                +</span>
+              Collect LinkedIn ads</button></section>
+          <section id="collection-panel" class="collection-panel" aria-labelledby="collection-title" hidden>
+            <div class="section-heading">
+              <div>
+                <div id="collection-eyebrow" class="eyebrow">
+                  LIVE RESEARCH</div>
+                <h2 id="collection-title">
+                  Collect a new snapshot</h2></div>
+              <button id="close-collection" class="icon-button" type="button" aria-label="Close collection controls">
+                ×</button></div>
+            <p id="collection-description" class="muted">
+              Collect public LinkedIn ads for the five companies in your watchlist. The first collection establishes a baseline; later comparable collections reveal changes.</p>
+            <div id="public-setup" class="public-setup" hidden>
+              <ol>
+                <li>Install Python 3.9 or newer, then download or clone the project from GitHub.</li>
+                <li>Run the commands below and open <strong>http://127.0.0.1:8920/</strong> on your computer.</li>
+                <li>Choose <strong>Collect LinkedIn ads</strong>, connect your own Apify token locally, and start a bounded collection.</li>
+              </ol>
+              <pre><code>git clone https://github.com/vinaynaik432-debug/competitor-campaign-intelligence.git
+cd competitor-campaign-intelligence
+python3 app.py</code></pre>
+              <p class="help">The collector uses your Apify credits. A fresh local copy includes a US$5 project allowance, with US$0.10 reserved per company run. Your token stays in the local server's memory. This GitHub Pages demo has no token entry or live collection.</p>
+              <div class="public-setup-links">
+                <a class="button button-secondary" href="https://github.com/vinaynaik432-debug/competitor-campaign-intelligence" target="_blank" rel="noopener noreferrer">View source on GitHub ↗</a>
+                <a class="text-button" href="https://github.com/vinaynaik432-debug/competitor-campaign-intelligence#run-locally" target="_blank" rel="noopener noreferrer">Read setup instructions ↗</a>
+              </div>
+            </div>
+            <div class="collection-grid">
+              <div>
+                <form id="connect-form">
+                  <label for="apify-token">
+                    Apify API token</label>
+                  <div class="token-row">
+                    <input id="apify-token" type="password" autocomplete="off" spellcheck="false" placeholder="Enter your own Apify token" maxlength="300" aria-describedby="token-help">
+                    <button id="connect-button" class="button button-secondary" type="submit">
+                      Connect</button></div>
+                  <p id="token-help" class="help">
+                    Held in this server’s memory only. Never added to exports or saved in browser storage.</p></form>
+                <div class="connection-row">
+                  <span id="connection-state" class="connection-state">
+                    Not connected</span>
+                  <button id="disconnect-button" class="text-button" type="button" hidden>
+                    Disconnect</button></div></div>
+              <div class="collection-settings">
+                <div class="settings-row">
+                  <div>
+                    <label for="max-ads">
+                      Maximum ads per company</label>
+                    <select id="max-ads">
+                      <option value="5">
+                        5 ads · quick check</option>
+                      <option value="10" selected>
+                        10 ads · first look</option>
+                      <option value="20">
+                        20 ads · wider sample</option></select></div>
+                  <div class="budget-box">
+                    <span>
+                      Unallocated allowance</span>
+                    <strong id="budget-remaining">
+                      $5.00</strong>
+                    <small id="budget-detail">
+                      US$5.00 total cap</small></div></div>
+                <label class="checkbox-label" for="capture-pages">
+                  <input type="checkbox" id="capture-pages" checked>
+                  <span>
+                    Capture available public landing-page text</span></label>
+                <p class="help">
+                  Up to two exposed destinations per company. Results are samples, so missing ads do not imply a stopped campaign.</p>
+                <button id="start-scan" class="button button-primary" type="button" disabled>
+                  Start collection</button></div></div>
+            <div id="collection-status" class="job-status" role="status" aria-live="polite" hidden>
+            </div>
+          </section>
+          <div class="dataset-toolbar">
+            <div class="segmented-control" role="group" aria-label="Choose data source">
+              <button id="mode-live" type="button" aria-pressed="false">
+                Live research</button>
+              <button id="mode-demo" type="button" class="selected" aria-pressed="true">
+                Explore sample</button></div>
+            <div class="snapshot-picker">
+              <label for="snapshot-select">
+                Snapshot</label>
+              <select id="snapshot-select" aria-label="Select saved snapshot">
+                <option>
+                  Loading…</option></select></div></div>
+          <div id="dataset-notice" class="dataset-notice" role="status">
+            <span class="notice-symbol" aria-hidden="true">
+              ◈</span>
+            <div>
+              <strong>
+                Illustrative walkthrough</strong>
+              <span>
+                Fictional companies and ads. Use this to explore the workflow.</span></div>
+            <span class="notice-badge">
+              SAMPLE DATA</span></div>
+          <section class="metrics" aria-label="Snapshot overview">
+            <div class="metric-card">
+              <div class="metric-label">
+                Companies observed
+                <span aria-hidden="true">
+                  ◎</span></div>
+              <div class="metric-value" id="metric-companies">
+                —</div>
+              <p id="metric-companies-note">
+                In this snapshot</p></div>
+            <div class="metric-card">
+              <div class="metric-label">
+                Ads collected
+                <span aria-hidden="true">
+                  ▤</span></div>
+              <div class="metric-value" id="metric-ads">
+                —</div>
+              <p id="metric-ads-note">
+                Public ad records</p></div>
+            <div class="metric-card metric-emphasis">
+              <div class="metric-label">
+                Changes to review
+                <span aria-hidden="true">
+                  ↗</span></div>
+              <div class="metric-value" id="metric-changes">
+                —</div>
+              <p id="metric-changes-note">
+                Compared with previous snapshot</p></div>
+            <div class="metric-card">
+              <div class="metric-label">
+                Marked useful
+                <span aria-hidden="true">
+                  ✓</span></div>
+              <div class="metric-value" id="metric-useful">
+                —</div>
+              <p id="metric-useful-note">
+                Your review, not an AI score</p></div></section>
+          <section id="coverage-section" class="coverage-section" aria-label="Company collection coverage">
+            <div class="coverage-heading">
+              <span class="small-label">
+                COLLECTION COVERAGE</span>
+              <span id="comparison-label" class="comparison-label">
+              </span>
+            </div>
+            <div id="company-coverage" class="company-coverage">
+            </div>
+          </section>
+          <section id="research-view" aria-labelledby="feed-title">
+            <div class="section-heading feed-heading">
+              <div>
+                <h2 id="feed-title">
+                  Change feed</h2>
+                <p id="feed-description" class="muted">
+                  What changed, why it may matter and where to verify it.</p></div>
+              <a id="export-link" class="button button-secondary button-small" href="./api/events/export?mode=demo" download>
+                ↓ Export changes</a></div>
+            <div class="filter-bar">
+              <div class="search-wrap">
+                <label class="sr-only" for="search-input">
+                  Search ads and changes</label>
+                <span aria-hidden="true">
+                  ⌕</span>
+                <input id="search-input" type="search" placeholder="Search copy, offer or company…">
+              </div>
+              <label class="sr-only" for="company-filter">
+                Filter by company</label>
+              <select id="company-filter">
+                <option value="">
+                  All companies</option></select>
+              <label class="sr-only" for="type-filter">
+                Filter by change type</label>
+              <select id="type-filter">
+                <option value="">
+                  All change types</option>
+                <option value="offer_changed">
+                  Offer changes</option>
+                <option value="messaging_changed">
+                  Messaging changes</option>
+                <option value="landing_page_changed">
+                  Landing-page changes</option>
+                <option value="first_observed">
+                  First observed</option>
+                <option value="not_observed">
+                  Not observed</option></select>
+              <span id="results-count" class="results-count" aria-live="polite">
+              </span>
+            </div>
+            <div id="changes-list" class="changes-list">
+            </div>
+            <div id="ads-list" class="ads-list" hidden>
+            </div>
+          </section>
+          <section id="method-view" class="method-view" aria-labelledby="method-title" hidden>
+            <div class="section-heading">
+              <div>
+                <h2 id="method-title">
+                  From public ads to a useful finding</h2>
+                <p class="muted">
+                  A repeatable research workflow, with a source behind every observation.</p></div></div>
+            <div class="method-steps">
+              <article>
+                <span class="step-number">
+                  01</span>
+                <h3>
+                  Collect a baseline</h3>
+                <p>
+                  Capture ad IDs, copy, source links and available destinations for the same five advertisers. Save the collection time and scope.</p></article>
+              <article>
+                <span class="step-number">
+                  02</span>
+                <h3>
+                  Compare observations</h3>
+                <p>
+                  Compare later snapshots in the same scope. Identify copy and offer changes, new observations and meaningful landing-page text changes.</p></article>
+              <article>
+                <span class="step-number">
+                  03</span>
+                <h3>
+                  Inspect the evidence</h3>
+                <p>
+                  Read the before and after copy and open the public source. A rule-based label helps triage; your judgment decides what is useful.</p></article>
+              <article>
+                <span class="step-number">
+                  04</span>
+                <h3>
+                  Record a decision</h3>
+                <p>
+                  Mark findings useful, not useful or acted on. Compare research time and cost with a manual review to evaluate the workflow.</p></article></div>
+            <div class="method-boundaries">
+              <h3>
+                What the evidence can tell us</h3>
+              <ul>
+                <li>
+                  <strong>
+                    First observed</strong>
+                  means first seen in these saved collections. It is not a launch date.</li>
+                <li>
+                  <strong>
+                    Audience language</strong>
+                  in copy is an interpretation. Disclosed targeting, when available, is displayed separately.</li>
+                <li>
+                  <strong>
+                    Not observed</strong>
+                  is used only for comparable complete collections. It never proves a campaign stopped.</li>
+                <li>
+                  <strong>
+                    Public ads</strong>
+                  do not reveal conversions, revenue, ROAS or whether a campaign works.</li>
+                <li>
+                  <strong>
+                    Landing pages</strong>
+                  can change by location, personalization or an A/B test. Review a change before calling it a strategy shift.</li></ul>
+              <p id="methodology-detail" class="help">
+              </p>
+            </div>
+          </section>
+          <footer class="main-footer">
+            <span>
+              Campaign Radar
+              <span aria-hidden="true">
+                ·</span>
+              Evidence before inference.</span>
+            <span>
+              Manual collection · No ads sent or campaigns changed</span></footer></main></div></div></body></html>

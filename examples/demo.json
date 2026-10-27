@@ -1,0 +1,667 @@
+{
+  "description": "Illustrative walkthrough only. All five company names, ad copy, dates and changes are fictional. No paid or live Actor was used to create this demo. example.com is a placeholder page, not evidence of a real campaign.",
+  "snapshots": [
+    {
+      "id": "demo-before",
+      "collected_at": "2026-10-20T09:00:00Z",
+      "mode": "demo",
+      "scope": {
+        "platform": "linkedin",
+        "date_range": "last-30-days",
+        "countries": [],
+        "max_ads_per_company": 10
+      },
+      "companies": [
+        {
+          "key": "orbitcrm",
+          "name": "OrbitCRM",
+          "linkedin_url": "",
+          "status": "complete",
+          "notes": [
+            "Fictional company and illustrative ads; this is not a real collection."
+          ],
+          "ads": [
+            {
+              "id": "demo-orbitcrm-1",
+              "advertiser_name": "OrbitCRM",
+              "advertiser_id": "",
+              "identity_status": "illustrative",
+              "text": "Start your 14-day free trial. Build a clearer pipeline with your sales team.",
+              "headline": "Try OrbitCRM with your team",
+              "cta": "Start free trial",
+              "landing_url": "",
+              "library_url": "",
+              "format": "image",
+              "start_date": "",
+              "end_date": "",
+              "media_urls": [],
+              "targeting": {},
+              "details_status": "ok",
+              "observed_at": "2026-10-20T09:00:00Z",
+              "landing_url_source": ""
+            },
+            {
+              "id": "demo-orbitcrm-2",
+              "advertiser_name": "OrbitCRM",
+              "advertiser_id": "",
+              "identity_status": "illustrative",
+              "text": "Sales CRM that brings the pipeline into focus.",
+              "headline": "Make your pipeline visible",
+              "cta": "Book a demo",
+              "landing_url": "",
+              "library_url": "",
+              "format": "image",
+              "start_date": "",
+              "end_date": "",
+              "media_urls": [],
+              "targeting": {},
+              "details_status": "ok",
+              "observed_at": "2026-10-20T09:00:00Z",
+              "landing_url_source": ""
+            },
+            {
+              "id": "demo-orbitcrm-3",
+              "advertiser_name": "OrbitCRM",
+              "advertiser_id": "",
+              "identity_status": "illustrative",
+              "text": "Sales CRM that brings the pipeline into focus.",
+              "headline": "Work together on every deal",
+              "cta": "Book a demo",
+              "landing_url": "",
+              "library_url": "",
+              "format": "image",
+              "start_date": "",
+              "end_date": "",
+              "media_urls": [],
+              "targeting": {},
+              "details_status": "ok",
+              "observed_at": "2026-10-20T09:00:00Z",
+              "landing_url_source": ""
+            }
+          ]
+        },
+        {
+          "key": "pipelinedesk",
+          "name": "PipelineDesk",
+          "linkedin_url": "",
+          "status": "complete",
+          "notes": [
+            "Fictional company and illustrative ads; this is not a real collection."
+          ],
+          "ads": [
+            {
+              "id": "demo-pipelinedesk-1",
+              "advertiser_name": "PipelineDesk",
+              "advertiser_id": "",
+              "identity_status": "illustrative",
+              "text": "A shared workspace for sales teams managing fast-moving deals.",
+              "headline": "Made for sales teams",
+              "cta": "Book a demo",
+              "landing_url": "",
+              "library_url": "",
+              "format": "image",
+              "start_date": "",
+              "end_date": "",
+              "media_urls": [],
+              "targeting": {},
+              "details_status": "ok",
+              "observed_at": "2026-10-20T09:00:00Z",
+              "landing_url_source": ""
+            },
+            {
+              "id": "demo-pipelinedesk-2",
+              "advertiser_name": "PipelineDesk",
+              "advertiser_id": "",
+              "identity_status": "illustrative",
+              "text": "Keep every customer conversation in one place.",
+              "headline": "Make your pipeline visible",
+              "cta": "Book a demo",
+              "landing_url": "",
+              "library_url": "",
+              "format": "image",
+              "start_date": "",
+              "end_date": "",
+              "media_urls": [],
+              "targeting": {},
+              "details_status": "ok",
+              "observed_at": "2026-10-20T09:00:00Z",
+              "landing_url_source": ""
+            },
+            {
+              "id": "demo-pipelinedesk-3",
+              "advertiser_name": "PipelineDesk",
+              "advertiser_id": "",
+              "identity_status": "illustrative",
+              "text": "Keep every customer conversation in one place.",
+              "headline": "Work together on every deal",
+              "cta": "Book a demo",
+              "landing_url": "",
+              "library_url": "",
+              "format": "image",
+              "start_date": "",
+              "end_date": "",
+              "media_urls": [],
+              "targeting": {},
+              "details_status": "ok",
+              "observed_at": "2026-10-20T09:00:00Z",
+              "landing_url_source": ""
+            }
+          ]
+        },
+        {
+          "key": "revnorth",
+          "name": "RevNorth",
+          "linkedin_url": "",
+          "status": "complete",
+          "notes": [
+            "Fictional company and illustrative ads; this is not a real collection."
+          ],
+          "ads": [
+            {
+              "id": "demo-revnorth-1",
+              "advertiser_name": "RevNorth",
+              "advertiser_id": "",
+              "identity_status": "illustrative",
+              "text": "Build a repeatable revenue process.",
+              "headline": "A simpler sales workflow",
+              "cta": "Book a demo",
+              "landing_url": "https://example.com/?illustrative-page=revnorth",
+              "library_url": "",
+              "format": "image",
+              "start_date": "",
+              "end_date": "",
+              "media_urls": [],
+              "targeting": {},
+              "details_status": "ok",
+              "observed_at": "2026-10-20T09:00:00Z",
+              "landing_page": {
+                "url": "https://example.com/?illustrative-page=revnorth",
+                "status": "ok",
+                "text": "RevNorth CRM. Build a repeatable revenue process. Explore the Starter plan at €19 per user per month. Book a demo.",
+                "title": "RevNorth CRM — illustrative page",
+                "fetched_at": "2026-10-20T09:00:00Z"
+              },
+              "landing_url_source": "explicit_destination"
+            },
+            {
+              "id": "demo-revnorth-2",
+              "advertiser_name": "RevNorth",
+              "advertiser_id": "",
+              "identity_status": "illustrative",
+              "text": "Build a repeatable revenue process.",
+              "headline": "Make your pipeline visible",
+              "cta": "Book a demo",
+              "landing_url": "",
+              "library_url": "",
+              "format": "image",
+              "start_date": "",
+              "end_date": "",
+              "media_urls": [],
+              "targeting": {},
+              "details_status": "ok",
+              "observed_at": "2026-10-20T09:00:00Z",
+              "landing_url_source": ""
+            },
+            {
+              "id": "demo-revnorth-3",
+              "advertiser_name": "RevNorth",
+              "advertiser_id": "",
+              "identity_status": "illustrative",
+              "text": "Build a repeatable revenue process.",
+              "headline": "Work together on every deal",
+              "cta": "Book a demo",
+              "landing_url": "",
+              "library_url": "",
+              "format": "image",
+              "start_date": "",
+              "end_date": "",
+              "media_urls": [],
+              "targeting": {},
+              "details_status": "ok",
+              "observed_at": "2026-10-20T09:00:00Z",
+              "landing_url_source": ""
+            }
+          ]
+        },
+        {
+          "key": "signalsuite",
+          "name": "SignalSuite",
+          "linkedin_url": "",
+          "status": "complete",
+          "notes": [
+            "Fictional company and illustrative ads; this is not a real collection."
+          ],
+          "ads": [
+            {
+              "id": "demo-signalsuite-1",
+              "advertiser_name": "SignalSuite",
+              "advertiser_id": "",
+              "identity_status": "illustrative",
+              "text": "Connect your customer journey from lead to renewal.",
+              "headline": "A simpler sales workflow",
+              "cta": "Book a demo",
+              "landing_url": "",
+              "library_url": "",
+              "format": "image",
+              "start_date": "",
+              "end_date": "",
+              "media_urls": [],
+              "targeting": {},
+              "details_status": "ok",
+              "observed_at": "2026-10-20T09:00:00Z",
+              "landing_url_source": ""
+            },
+            {
+              "id": "demo-signalsuite-2",
+              "advertiser_name": "SignalSuite",
+              "advertiser_id": "",
+              "identity_status": "illustrative",
+              "text": "Connect your customer journey from lead to renewal.",
+              "headline": "Make your pipeline visible",
+              "cta": "Book a demo",
+              "landing_url": "",
+              "library_url": "",
+              "format": "image",
+              "start_date": "",
+              "end_date": "",
+              "media_urls": [],
+              "targeting": {},
+              "details_status": "ok",
+              "observed_at": "2026-10-20T09:00:00Z",
+              "landing_url_source": ""
+            },
+            {
+              "id": "demo-signalsuite-3",
+              "advertiser_name": "SignalSuite",
+              "advertiser_id": "",
+              "identity_status": "illustrative",
+              "text": "Connect your customer journey from lead to renewal.",
+              "headline": "Work together on every deal",
+              "cta": "Book a demo",
+              "landing_url": "",
+              "library_url": "",
+              "format": "image",
+              "start_date": "",
+              "end_date": "",
+              "media_urls": [],
+              "targeting": {},
+              "details_status": "ok",
+              "observed_at": "2026-10-20T09:00:00Z",
+              "landing_url_source": ""
+            }
+          ]
+        },
+        {
+          "key": "bridgeflow",
+          "name": "BridgeFlow",
+          "linkedin_url": "",
+          "status": "complete",
+          "notes": [
+            "Fictional company and illustrative ads; this is not a real collection."
+          ],
+          "ads": [
+            {
+              "id": "demo-bridgeflow-1",
+              "advertiser_name": "BridgeFlow",
+              "advertiser_id": "",
+              "identity_status": "illustrative",
+              "text": "A clear next step for every deal.",
+              "headline": "A simpler sales workflow",
+              "cta": "Book a demo",
+              "landing_url": "",
+              "library_url": "",
+              "format": "image",
+              "start_date": "",
+              "end_date": "",
+              "media_urls": [],
+              "targeting": {},
+              "details_status": "ok",
+              "observed_at": "2026-10-20T09:00:00Z",
+              "landing_url_source": ""
+            },
+            {
+              "id": "demo-bridgeflow-2",
+              "advertiser_name": "BridgeFlow",
+              "advertiser_id": "",
+              "identity_status": "illustrative",
+              "text": "A clear next step for every deal.",
+              "headline": "Make your pipeline visible",
+              "cta": "Book a demo",
+              "landing_url": "",
+              "library_url": "",
+              "format": "image",
+              "start_date": "",
+              "end_date": "",
+              "media_urls": [],
+              "targeting": {},
+              "details_status": "ok",
+              "observed_at": "2026-10-20T09:00:00Z",
+              "landing_url_source": ""
+            },
+            {
+              "id": "demo-bridgeflow-3",
+              "advertiser_name": "BridgeFlow",
+              "advertiser_id": "",
+              "identity_status": "illustrative",
+              "text": "A clear next step for every deal.",
+              "headline": "Work together on every deal",
+              "cta": "Book a demo",
+              "landing_url": "",
+              "library_url": "",
+              "format": "image",
+              "start_date": "",
+              "end_date": "",
+              "media_urls": [],
+              "targeting": {},
+              "details_status": "ok",
+              "observed_at": "2026-10-20T09:00:00Z",
+              "landing_url_source": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "demo-after",
+      "collected_at": "2026-10-27T09:00:00Z",
+      "mode": "demo",
+      "scope": {
+        "platform": "linkedin",
+        "date_range": "last-30-days",
+        "countries": [],
+        "max_ads_per_company": 10
+      },
+      "companies": [
+        {
+          "key": "orbitcrm",
+          "name": "OrbitCRM",
+          "linkedin_url": "",
+          "status": "complete",
+          "notes": [
+            "Fictional company and illustrative ads; this is not a real collection."
+          ],
+          "ads": [
+            {
+              "id": "demo-orbitcrm-1",
+              "advertiser_name": "OrbitCRM",
+              "advertiser_id": "",
+              "identity_status": "illustrative",
+              "text": "Start your 30-day free trial. Build a clearer pipeline with your sales team.",
+              "headline": "Try OrbitCRM with your team",
+              "cta": "Start free trial",
+              "landing_url": "",
+              "library_url": "",
+              "format": "image",
+              "start_date": "",
+              "end_date": "",
+              "media_urls": [],
+              "targeting": {},
+              "details_status": "ok",
+              "observed_at": "2026-10-27T09:00:00Z",
+              "landing_url_source": ""
+            },
+            {
+              "id": "demo-orbitcrm-2",
+              "advertiser_name": "OrbitCRM",
+              "advertiser_id": "",
+              "identity_status": "illustrative",
+              "text": "Sales CRM that brings the pipeline into focus.",
+              "headline": "Make your pipeline visible",
+              "cta": "Book a demo",
+              "landing_url": "",
+              "library_url": "",
+              "format": "image",
+              "start_date": "",
+              "end_date": "",
+              "media_urls": [],
+              "targeting": {},
+              "details_status": "ok",
+              "observed_at": "2026-10-27T09:00:00Z",
+              "landing_url_source": ""
+            },
+            {
+              "id": "demo-orbitcrm-3",
+              "advertiser_name": "OrbitCRM",
+              "advertiser_id": "",
+              "identity_status": "illustrative",
+              "text": "Sales CRM that brings the pipeline into focus.",
+              "headline": "Work together on every deal",
+              "cta": "Book a demo",
+              "landing_url": "",
+              "library_url": "",
+              "format": "image",
+              "start_date": "",
+              "end_date": "",
+              "media_urls": [],
+              "targeting": {},
+              "details_status": "ok",
+              "observed_at": "2026-10-27T09:00:00Z",
+              "landing_url_source": ""
+            }
+          ]
+        },
+        {
+          "key": "pipelinedesk",
+          "name": "PipelineDesk",
+          "linkedin_url": "",
+          "status": "complete",
+          "notes": [
+            "Fictional company and illustrative ads; this is not a real collection."
+          ],
+          "ads": [
+            {
+              "id": "demo-pipelinedesk-1",
+              "advertiser_name": "PipelineDesk",
+              "advertiser_id": "",
+              "identity_status": "illustrative",
+              "text": "A shared workspace for revenue leaders coordinating sales and customer success.",
+              "headline": "Made for revenue leaders",
+              "cta": "Book a demo",
+              "landing_url": "",
+              "library_url": "",
+              "format": "image",
+              "start_date": "",
+              "end_date": "",
+              "media_urls": [],
+              "targeting": {},
+              "details_status": "ok",
+              "observed_at": "2026-10-27T09:00:00Z",
+              "landing_url_source": ""
+            },
+            {
+              "id": "demo-pipelinedesk-2",
+              "advertiser_name": "PipelineDesk",
+              "advertiser_id": "",
+              "identity_status": "illustrative",
+              "text": "Keep every customer conversation in one place.",
+              "headline": "Make your pipeline visible",
+              "cta": "Book a demo",
+              "landing_url": "",
+              "library_url": "",
+              "format": "image",
+              "start_date": "",
+              "end_date": "",
+              "media_urls": [],
+              "targeting": {},
+              "details_status": "ok",
+              "observed_at": "2026-10-27T09:00:00Z",
+              "landing_url_source": ""
+            },
+            {
+              "id": "demo-pipelinedesk-3",
+              "advertiser_name": "PipelineDesk",
+              "advertiser_id": "",
+              "identity_status": "illustrative",
+              "text": "Keep every customer conversation in one place.",
+              "headline": "Work together on every deal",
+              "cta": "Book a demo",
+              "landing_url": "",
+              "library_url": "",
+              "format": "image",
+              "start_date": "",
+              "end_date": "",
+              "media_urls": [],
+              "targeting": {},
+              "details_status": "ok",
+              "observed_at": "2026-10-27T09:00:00Z",
+              "landing_url_source": ""
+            }
+          ]
+        },
+        {
+          "key": "revnorth",
+          "name": "RevNorth",
+          "linkedin_url": "",
+          "status": "complete",
+          "notes": [
+            "Fictional company and illustrative ads; this is not a real collection."
+          ],
+          "ads": [
+            {
+              "id": "demo-revnorth-1",
+              "advertiser_name": "RevNorth",
+              "advertiser_id": "",
+              "identity_status": "illustrative",
+              "text": "Build a repeatable revenue process.",
+              "headline": "A simpler sales workflow",
+              "cta": "Book a demo",
+              "landing_url": "https://example.com/?illustrative-page=revnorth",
+              "library_url": "",
+              "format": "image",
+              "start_date": "",
+              "end_date": "",
+              "media_urls": [],
+              "targeting": {},
+              "details_status": "ok",
+              "observed_at": "2026-10-27T09:00:00Z",
+              "landing_page": {
+                "url": "https://example.com/?illustrative-page=revnorth",
+                "status": "ok",
+                "text": "RevNorth CRM. Build a repeatable revenue process. Explore the Starter plan at €29 per user per month. Book a demo.",
+                "title": "RevNorth CRM — illustrative page",
+                "fetched_at": "2026-10-27T09:00:00Z"
+              },
+              "landing_url_source": "explicit_destination"
+            },
+            {
+              "id": "demo-revnorth-2",
+              "advertiser_name": "RevNorth",
+              "advertiser_id": "",
+              "identity_status": "illustrative",
+              "text": "Build a repeatable revenue process.",
+              "headline": "Make your pipeline visible",
+              "cta": "Book a demo",
+              "landing_url": "",
+              "library_url": "",
+              "format": "image",
+              "start_date": "",
+              "end_date": "",
+              "media_urls": [],
+              "targeting": {},
+              "details_status": "ok",
+              "observed_at": "2026-10-27T09:00:00Z",
+              "landing_url_source": ""
+            },
+            {
+              "id": "demo-revnorth-4",
+              "advertiser_name": "RevNorth",
+              "advertiser_id": "",
+              "identity_status": "illustrative",
+              "text": "Download our free guide to weekly pipeline reviews.",
+              "headline": "A guide to a predictable pipeline",
+              "cta": "Download guide",
+              "landing_url": "",
+              "library_url": "",
+              "format": "image",
+              "start_date": "",
+              "end_date": "",
+              "media_urls": [],
+              "targeting": {},
+              "details_status": "ok",
+              "observed_at": "2026-10-27T09:00:00Z",
+              "landing_url_source": ""
+            }
+          ]
+        },
+        {
+          "key": "signalsuite",
+          "name": "SignalSuite",
+          "linkedin_url": "",
+          "status": "complete",
+          "notes": [
+            "Fictional company and illustrative ads; this is not a real collection."
+          ],
+          "ads": [
+            {
+              "id": "demo-signalsuite-1",
+              "advertiser_name": "SignalSuite",
+              "advertiser_id": "",
+              "identity_status": "illustrative",
+              "text": "Connect your customer journey\n  from lead to renewal.",
+              "headline": "A simpler sales workflow",
+              "cta": "Book a demo",
+              "landing_url": "",
+              "library_url": "",
+              "format": "image",
+              "start_date": "",
+              "end_date": "",
+              "media_urls": [],
+              "targeting": {},
+              "details_status": "ok",
+              "observed_at": "2026-10-27T09:00:00Z",
+              "landing_url_source": ""
+            },
+            {
+              "id": "demo-signalsuite-2",
+              "advertiser_name": "SignalSuite",
+              "advertiser_id": "",
+              "identity_status": "illustrative",
+              "text": "Connect your customer journey from lead to renewal.",
+              "headline": "Make your pipeline visible",
+              "cta": "Book a demo",
+              "landing_url": "",
+              "library_url": "",
+              "format": "image",
+              "start_date": "",
+              "end_date": "",
+              "media_urls": [],
+              "targeting": {},
+              "details_status": "ok",
+              "observed_at": "2026-10-27T09:00:00Z",
+              "landing_url_source": ""
+            },
+            {
+              "id": "demo-signalsuite-3",
+              "advertiser_name": "SignalSuite",
+              "advertiser_id": "",
+              "identity_status": "illustrative",
+              "text": "Connect your customer journey from lead to renewal.",
+              "headline": "Work together on every deal",
+              "cta": "Book a demo",
+              "landing_url": "",
+              "library_url": "",
+              "format": "image",
+              "start_date": "",
+              "end_date": "",
+              "media_urls": [],
+              "targeting": {},
+              "details_status": "ok",
+              "observed_at": "2026-10-27T09:00:00Z",
+              "landing_url_source": ""
+            }
+          ]
+        },
+        {
+          "key": "bridgeflow",
+          "name": "BridgeFlow",
+          "linkedin_url": "",
+          "status": "failed",
+          "notes": [
+            "Illustrative collection failure. Missing ads are not interpreted as stopped campaigns."
+          ],
+          "ads": []
+        }
+      ]
+    }
+  ]
+}

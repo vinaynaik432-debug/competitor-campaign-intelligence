@@ -1,0 +1,172 @@
+{
+  "verified_at": "2026-10-27",
+  "verification_method": "Read-only public Apify API metadata, default-build input schema and public LinkedIn company HTML. No paid run performed during this research.",
+  "actor": {
+    "name": "oski/linkedin-ad-library-scraper",
+    "id": "Kifge2w4XGOnaKWzH",
+    "verified_build_number": "0.1.8",
+    "verified_build_id": "qYpgaxg3jH574Cgoi",
+    "maintainer": "Community",
+    "pricing_model": "PAY_PER_EVENT",
+    "maximum_verified_tier_prices_usd": {
+      "actor-start": 0.002,
+      "ad": 0.0015
+    },
+    "estimated_actor_price_for_five_runs_of_ten_ads_usd": 0.085,
+    "pricing_note": "Estimate uses the highest published tier price and excludes any ancillary API/storage charges. Recheck pricing before paid runs; event prices can change.",
+    "input_example_one_company": {
+      "companyIds": [
+        "68529"
+      ],
+      "countries": [],
+      "dateRange": "last-30-days",
+      "includeDetails": true,
+      "maxAdsPerSearch": 10,
+      "maxAds": 10
+    },
+    "run_query_parameters_example": {
+      "build": "0.1.8",
+      "maxTotalChargeUsd": 0.1,
+      "timeout": 180,
+      "restartOnError": false
+    },
+    "authentication": "Send the token in the Authorization Bearer header, never in query strings.",
+    "input_semantics": {
+      "companyIds": "Numeric company IDs or numeric company URLs match an exact advertiser. Prefer these over name searches.",
+      "countries": "Empty array includes all available countries. Nonempty array limits ads to those shown in the specified countries; names or country codes are accepted.",
+      "dateRange": "Allowed values: all, last-30-days, current-month, current-year, last-year. A rolling range changes its actual start and end dates between runs.",
+      "startDate_endDate": "Optional absolute or relative custom dates override dateRange. The provider states data can lag by one day.",
+      "maxAdsPerSearch": "Input-side cap for each advertiser/company/keyword/search URL.",
+      "maxAds": "Input-side cap for the whole run; zero means unlimited and should not be used for this project.",
+      "includeDetails": "Required for full details. Disabling does not lower the documented per-ad price."
+    },
+    "normalization_fields": {
+      "identity": [
+        "ad_id",
+        "ad_url",
+        "advertiser_company_id",
+        "advertiser_name",
+        "advertiser_type",
+        "advertiser_url"
+      ],
+      "creative": [
+        "headline",
+        "commentary",
+        "cta",
+        "format",
+        "format_label",
+        "creative_type",
+        "image_urls",
+        "video_urls",
+        "carousel_slides",
+        "document_page_urls"
+      ],
+      "transparency": [
+        "paid_by",
+        "has_eu_transparency_data",
+        "first_shown",
+        "last_shown",
+        "impressions_range",
+        "impressions_min",
+        "impressions_max",
+        "impressions_by_country",
+        "targeting",
+        "targeting_parameters"
+      ],
+      "quality": [
+        "search",
+        "details_status",
+        "scraped_at"
+      ],
+      "additional_fields_mentioned_in_readme": [
+        "commentary_links",
+        "advertiser_logo_url",
+        "message_sender",
+        "message_body",
+        "message_ctas",
+        "video_poster_url"
+      ],
+      "details_status": "ok or unavailable in documented output; treat missing/unknown statuses conservatively.",
+      "landing_url": "No dedicated landing-page URL exists in the documented sample. Only use concrete observed external URLs from returned links, and preserve the extraction source. A commentary link is a linked page, not necessarily the ad CTA destination."
+    },
+    "coverage_cautions": [
+      "A SUCCEEDED run does not prove that all ads were collected.",
+      "If the result count reaches maxAdsPerSearch or maxAds, mark collection as capped. Fewer results do not alone prove full coverage either.",
+      "An ad absent from a later partial, capped or failed scan must not be called stopped or removed.",
+      "Even with successful scans, ads can age out of the rolling date window or public library retention period.",
+      "Store the requested scope, Actor build, run ID, fetched timestamp and source links with each snapshot.",
+      "Fetch all dataset pages using offset/limit and X-Apify-Pagination-Total; dataset pagination completion is separate from upstream search completeness.",
+      "Only some ads disclose dates, impressions and targeting. Null is unknown, not zero or false.",
+      "Public copy can suggest audience messaging; it does not prove delivery targeting.",
+      "Do not infer spend, clicks, conversions, ROAS or ad performance from ad presence or impression ranges.",
+      "The documented dataset has no structured per-search success or total-found field. The run statusMessage may describe skipped searches, unrecognized countries or unavailable ads. Do not claim complete coverage from SUCCEEDED plus fewer than the cap alone."
+    ],
+    "pricing_effective_from": "2026-09-18T00:06:51.885Z",
+    "price_selection": "Select the pricingInfos record with the latest startedAt that is not in the future. At verification, only one oski record exists; there is no advertised future pricing record."
+  },
+  "companies": [
+    {
+      "name": "HubSpot",
+      "linkedin_company_id": "68529",
+      "source": "https://www.linkedin.com/company/hubspot"
+    },
+    {
+      "name": "Salesforce",
+      "linkedin_company_id": "3185",
+      "source": "https://www.linkedin.com/company/salesforce"
+    },
+    {
+      "name": "Pipedrive",
+      "linkedin_company_id": "1876917",
+      "source": "https://www.linkedin.com/company/pipedrive"
+    },
+    {
+      "name": "Zoho",
+      "linkedin_company_id": "38373",
+      "source": "https://www.linkedin.com/company/zoho"
+    },
+    {
+      "name": "Freshworks",
+      "linkedin_company_id": "1377014",
+      "source": "https://www.linkedin.com/company/freshworks-inc"
+    }
+  ],
+  "alternative": {
+    "name": "ivanvs/linkedin-ad-library-scraper",
+    "id": "vOEvl50jL0jIbJPSg",
+    "verified_build_number": "0.0.22",
+    "pricing_model": "PAY_PER_EVENT",
+    "maximum_verified_tier_prices_usd": {
+      "apify-default-dataset-item": 0.003,
+      "apify-actor-start": 0.005
+    },
+    "input_fields": [
+      "urls",
+      "maxRecords"
+    ],
+    "schema_warning": "Current build input uses maxRecords, despite the README example using maxResults.",
+    "normalization_difference": "id/url; advertiser{name,url}; body/title/buttons; period{start,end}; paidBy; totalImpression; targetingSettings; targetingParameters.",
+    "selection_note": "Longer public usage history than oski, but higher unit price and a README/schema mismatch. Retain as a separately tested fallback, never silently switch providers within a comparison series."
+  },
+  "budget_controls": {
+    "maxTotalChargeUsd": "Apify run query parameter that caps total charge. Use for this pay-per-event Actor.",
+    "maxItems": "The Apify run maxItems query parameter controls paid dataset items only for pay-per-result Actors; it is not the correct budget control for this pay-per-event Actor.",
+    "ambiguous_start": "A lost response to the POST may still mean a run started. Reserve the maximum charge and do not blindly retry paid starts.",
+    "project_cap": "Enforce the user-approved cumulative cap separately from each per-run cap, including pending and uncertain runs.",
+    "reported_spend": "Authenticated run usageTotalUsd is the actual total charged for the run under its pricing model. Missing/null means unknown. eventUsage is a breakdown already included; do not add it again. Retain the full reservation independently if cost accounting is uncertain.",
+    "reported_event_breakdown": "eventUsage[eventName].eventTotalUsd reports PPE event totals. chargedEventCounts reports charge counts. externalChargedTotalUsd concerns multi-tenant Standby and is not applicable."
+  },
+  "sources": [
+    "https://apify.com/oski/linkedin-ad-library-scraper",
+    "https://api.apify.com/v2/acts/oski~linkedin-ad-library-scraper",
+    "https://api.apify.com/v2/acts/oski~linkedin-ad-library-scraper/builds/default",
+    "https://apify.com/ivanvs/linkedin-ad-library-scraper",
+    "https://api.apify.com/v2/acts/ivanvs~linkedin-ad-library-scraper",
+    "https://api.apify.com/v2/acts/ivanvs~linkedin-ad-library-scraper/builds/default",
+    "https://docs.apify.com/api/v2/actors-runs-post",
+    "https://docs.apify.com/api/v2/dataset-items-get",
+    "https://tcommunity.linkedin.com/linkedin-admin-center-207/here-s-how-to-find-your-linkedin-company-id-704",
+    "https://docs.apify.com/api/v2/actor-run-get",
+    "https://docs.apify.com/actors/monetize/pay-per-event"
+  ]
+}
